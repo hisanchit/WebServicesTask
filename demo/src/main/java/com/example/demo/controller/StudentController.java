@@ -59,26 +59,4 @@ public class StudentController {
 		return ResponseEntity.noContent().build();
 	}
 
-	/*@GetMapping("/students/{id}")
-	public Student retrieveStudent(@PathVariable long id) {
-		Optional<Student> student = studentRepository.findById(id);
-
-		if (!student.isPresent())
-			throw new StudentNotFoundException("id-" + id);
-
-		return student.get();
-	}
-
-	@PostMapping("/students")
-	public ResponseEntity<Object> createStudent(@RequestBody Student student) {
-		Student savedStudent = studentRepository.save(student);
-
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(savedStudent.getId()).toUri();
-
-		return ResponseEntity.created(location).build();
-
-	}
-	
-	*/
 }
